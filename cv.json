@@ -1,0 +1,25 @@
+{
+    "Education": [
+        {
+            "Education": "UX/UI with frontendskills",
+            "School": "Chas Academy",
+            "Description": "YH education"
+        },
+        {
+            "Education": "UX Writing",
+            "School": "Nackademin",
+            "Description": "Writing"
+        },
+        {
+            "Education": "Basic Webdevelopment",
+            "School": "Luleå Universitet",
+            "Description": "HTML, CSS"
+        }
+    ],
+
+    "Experience": [
+        "Min längsta yrkeserfarenhet är inom KBT behandling för substans-, och spelberoende."
+    ]
+}
+
+   
