@@ -1,24 +1,56 @@
 {
-    "Education": [
+    "courses": [
         {
-            "Education": "UX/UI with frontendskills",
-            "School": "Chas Academy",
-            "Description": "YH education"
+            "course": "UX/UI med frontendkompeten",
+            "school": "Chas Academy",
+            "desc": "YH utbildning",
+            "period": "2022-2024"
         },
         {
-            "Education": "UX Writing",
-            "School": "Nackademin",
-            "Description": "Writing"
+            "course": "UX Writing",
+            "school": "Nackademin",
+            "desc": "Att skriva för användaren",
+            "period": "Våren 2022"
         },
         {
-            "Education": "Basic Webdevelopment",
-            "School": "Luleå Universitet",
-            "Description": "HTML, CSS"
-        }
+            "course": "Grundläggande webbutveckling",
+            "school": "Luleå Universitet",
+            "desc": "HTML, CSS",
+            "period": "Våren 2022"
+        },
+        {
+            "course": "Programmering 1",
+            "school": "NTI",
+            "desc": "C#",
+            "period": "Våren 2022"
+        },
+
+        {
+            "course": "KBT terapeut (Steg 1)",
+            "school": "KBT Svealand",
+            "desc": "Grundläggande psykoterapiutbildning",
+            "period": "2006-2007"
+        },
+            {
+            "course": "Beteendevetenskap",
+            "school": "Stockholms Universitet",
+            "desc": "Psykologi, socialt arbete",
+            "period": "2005-2007"
+            }
     ],
 
-    "Experience": [
-        "Min längsta yrkeserfarenhet är inom KBT behandling för substans-, och spelberoende."
+    "work": [
+        {            
+            "experience": "Från 2007 och framåt, har jag arbetet med behandling av beroende, av alkohol, droger och spel från Södertälje, Huddinge och Kalmar kommun"
+        },
+
+        {
+            "experience": "Jag har vana att hålla i föreläsninger, kurser eller workshops och tillhör skaran som tycker det är roligt att prata inför människor. Detta både inom Stockholms stad och i Kalmar kommun"
+        }, 
+
+        {
+            "experience": "Jag har erfarenhet av att skapa content för webben, både från ett arbete från Enjoy Wine and spirits"
+        }
     ]
 }
 

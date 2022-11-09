@@ -54,6 +54,7 @@ a {
     "values"
     "popup"
     "image-me"
+    "arrow3"
     "text-me"
     "footer"
 }
@@ -93,6 +94,7 @@ nav ul {
 nav li {
     list-style: none;
     text-align: center;
+    padding: 0.2rem 0;
 }
 
 nav a {
@@ -200,8 +202,9 @@ nav a:is(:link, :active, :visited).active {
     transform: translate(-50%, -50%);
     background-color: var(--light);
     padding: 1rem 1.5rem;
-    width: 18rem;
+    width: 15rem;
     border-radius: 0.5rem;
+    font-size: 1rem;
   }
 
   .close-button {
@@ -212,10 +215,12 @@ nav a:is(:link, :active, :visited).active {
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: var(black);
+    font-size: 2rem;
   }
   
   .close-button:hover {
     background-color: darkgray;
+    font-weight: bold;
   }
   
   .show-modal {
@@ -286,20 +291,18 @@ nav a:is(:link, :active, :visited).active {
     height: 80rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 1rem;
     grid-template-areas: 
     "header"
     "hero"
-    "edu"
-    "exp"
-    "skills"
-    "tools"
+    "education"
+    "experience"
     "footer";
 }
 
-.edu {
-    grid-area: edu;
+.education {
+    grid-area: education;
     background-color: var(--light);
     height: 40rem;
     display: flex;
@@ -312,8 +315,12 @@ nav a:is(:link, :active, :visited).active {
     margin: 0 2rem;
 }
 
-.exp {
-    grid-area: exp;
+.courseList {
+    list-style-type: none;
+}
+
+.experience {
+    grid-area: experience;
     height: 40rem;
     display: flex;
     flex-direction: column;
@@ -325,7 +332,12 @@ nav a:is(:link, :active, :visited).active {
     margin: 0.1rem 2rem;
 }
 
-.skills {
+.workList {
+    list-style-type: none;
+}
+
+
+/*.skills {
     grid-area: skills;
     background-color: var(--light);
     height: 10rem;
@@ -351,7 +363,7 @@ nav a:is(:link, :active, :visited).active {
     border-radius: .3rem;
     padding: 0 2rem;
     margin: 0 2rem;
-}
+}*/
 
 /* Portfolio sidan för mobil*/
 .container-portfolio {
@@ -483,18 +495,19 @@ nav a:is(:link, :active, :visited).active {
 }
 
 .contact-form {
-    background-color: var(--apricot);
+    background-color: var(--gray);
     width: 17rem;
     height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 5px;
     padding-bottom: 30px;
     margin-top: 30px;
     margin-left: 1.2rem;
     box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
+    letter-spacing: 0.2rem;
 }
 
 .side {
@@ -552,60 +565,13 @@ input {
 
 
 .thanks {
+    width: 100%;
     background-color: var(--apricot);
     font-family: 'Roboto Condensed', sans-serif;
-    border: 6px solid var(--black);
+    border: 3px solid var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-width: 100%;
-}
-
-h1 {
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    padding-bottom: 2rem;
-}
-
-p {
-    font-family: 'Vollkorn', sans-serif;
-    padding-bottom: 1rem;
-}
-
-.game{
-    background-color: var(--gray);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    top: 30%;
-    padding: 3rem 3rem;
-    box-shadow: 2rem;
-    border-radius: 0.5rem;
-    margin-top: 3rem;
-}
-
-.guessField {
-    padding: 0.7rem;
-}
-.guessSubmit {
-    padding: 0.6rem 1.5rem;
-    border-radius: 0.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 3rem;
 }
 
 @media only screen and (min-width: 400px) and (max-width: 600px){
@@ -641,7 +607,7 @@ and (max-width: 767px) {
 }
 
 .contact-form {
-    background-color: var(--apricot);
+    /*background-color: var(--gray);*/
     width: 55%;
     height: 35rem;
     display: flex;
@@ -651,7 +617,6 @@ and (max-width: 767px) {
     border-radius: 15px;
     padding-bottom: 30px;
     margin-top: 30px;
-    box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
 }
 
 .side {
@@ -777,6 +742,7 @@ input {
         max-height: 50%;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
 
     }
 
@@ -790,25 +756,32 @@ input {
     }
 
     .container-cv {
-        min-width: 80%;
-        max-width: 90%;
-        height: 80rem;
+        width: 100vw;
+        height: 40rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         gap: 1rem;
         grid-template-areas: 
         "header header"
         "hero hero"
-        "edu exp"
+        "cv cv"
         "skills tools"
         "footer footer";
     }
+
+    .cv {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     
-    .edu {
-        min-width: 80%;
-        max-width: 90%;
-        height: 60rem;
+    .education {
+        height: 35rem;
+        min-width: 40%;
+        max-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -816,10 +789,10 @@ input {
         padding: 1rem 2rem;
     }
     
-    .exp {
-        min-width: 80%;
-        max-width: 90%;
-        height: 60rem;
+    .experience {
+        height: 35rem;
+        min-width: 40%;
+        max-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -827,7 +800,7 @@ input {
         padding: 1rem 2rem;
     }
     
-    .skills {
+    /*.skills {
         min-width: 80%;
         max-width: 90%;
         height: 17rem;
@@ -847,7 +820,7 @@ input {
         justify-content: flex-start;
         align-items: center;
         padding: 1rem 2rem;
-    }
+    }*/
 
     .container-portfolio {
         width: 100vw;
@@ -883,7 +856,6 @@ input {
         grid-column-start: 2;
         grid-column-end: 3; 
         padding-right: 5rem;       
-
     }
 
     .project2{
@@ -900,7 +872,7 @@ input {
         min-width: 50%;
         max-width: 100%;
         padding-left: 1rem;
-        }
+    }
 
     .text2 {
         height: 12rem;
@@ -961,18 +933,15 @@ input {
     }
     
     .contact-form {
-        background-color: var(--apricot);
         width: 45%;
         height: 35rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 15px;
         padding-bottom: 30px;
         margin-top: 50px;
         margin-left: 0.1rem;
-        box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
     }
     
     input {
