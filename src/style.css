@@ -214,7 +214,7 @@ nav a:is(:link, :active, :visited).active {
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: var(black);
+    background-color: var(--gray);
     font-size: 2rem;
   }
   
@@ -235,6 +235,7 @@ nav a:is(:link, :active, :visited).active {
 .arrow2{
     display: none;
 }
+
 .about-me {
     width: 100vw;
     height: 30%;
@@ -264,10 +265,9 @@ nav a:is(:link, :active, :visited).active {
 }
 
 /*footer*/
-
 .footer {
     grid-area: footer;
-    background-color: var(gray);
+    background-color: var(--gray);
     width: 100vw;
     height: 6rem;
     display: flex;
@@ -288,48 +288,57 @@ nav a:is(:link, :active, :visited).active {
 
 .container-cv {
     width: 100vw;
-    height: 80rem;
+    height: 100rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 2rem;
     grid-template-areas: 
     "header"
     "hero"
     "education"
     "experience"
+    "skills"
     "footer";
 }
 
 .education {
     grid-area: education;
     background-color: var(--light);
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     border: 3px solid var(--black);
     border-radius: .3rem;
-    padding: 0 2rem;
-    margin: 0 2rem;
+    padding: 0.2rem 2rem;
+    margin: 0 1.5rem;
 }
 
 .courseList {
     list-style-type: none;
 }
 
+.courseList h3 {
+    padding: 0.8rem 0;
+}
+
+.skillsList {
+    list-style-type: none;
+}
+
 .experience {
     grid-area: experience;
-    height: 40rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     border: 3px solid var(--black);
     border-radius: 0.3rem;
-    padding: 0.1rem 2rem;
-    margin: 0.1rem 2rem;
+    padding: 0.2rem 2rem;
+    margin: 0.1rem 1.5rem;
 }
 
 .workList {
@@ -337,7 +346,7 @@ nav a:is(:link, :active, :visited).active {
 }
 
 
-/*.skills {
+.skills {
     grid-area: skills;
     background-color: var(--light);
     height: 10rem;
@@ -348,10 +357,11 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--black);
     border-radius: .3rem;
     padding: 0 2rem;
-    margin: 0 2rem;
+    margin: 0 1.5rem;
+    list-style-type: none;
 }
 
-.tools {
+/*.tools {
     grid-area: tools;
     background-color: var(--light);
     height: 10rem;
@@ -497,7 +507,7 @@ nav a:is(:link, :active, :visited).active {
 .contact-form {
     background-color: var(--gray);
     width: 17rem;
-    height: 35rem;
+    height: 33rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -505,7 +515,8 @@ nav a:is(:link, :active, :visited).active {
     border-radius: 5px;
     padding-bottom: 30px;
     margin-top: 30px;
-    margin-left: 1.2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
     box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
     letter-spacing: 0.2rem;
 }
@@ -725,6 +736,10 @@ input {
         "footer footer";
     }
 
+    .arrow3 {
+        display: none;
+    }
+
     .about-me{
         grid-area: about-me;
         width: 100vw;
@@ -757,7 +772,7 @@ input {
 
     .container-cv {
         width: 100vw;
-        height: 40rem;
+        height: 50rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -765,44 +780,58 @@ input {
         grid-template-areas: 
         "header header"
         "hero hero"
-        "cv cv"
-        "skills tools"
+        "education experience"
+        "education skills"
         "footer footer";
     }
 
     .cv {
         width: 100vw;
+        background-color: aqua;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
     }
     
     .education {
-        height: 35rem;
-        min-width: 40%;
+        height: 45rem;
         max-width: 50%;
+        background-color: lightcoral;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
         padding: 1rem 2rem;
     }
     
     .experience {
-        height: 35rem;
-        min-width: 40%;
+        height: 20rem;
         max-width: 50%;
+        background-color: lightgrey;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
         padding: 1rem 2rem;
     }
     
-    /*.skills {
-        min-width: 80%;
-        max-width: 90%;
+    .skills {
+        grid-area: skills;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        background-color: lightsalmon;
+        max-width: 30%;
         height: 17rem;
         display: flex;
         flex-direction: column;
@@ -811,7 +840,7 @@ input {
         padding: 1rem 2rem;
     }
 
-    .tools {
+    /*.tools {
         min-width: 80%;
         max-width: 90%;
         height: 17rem;

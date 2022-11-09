@@ -1,7 +1,7 @@
 {
     "courses": [
         {
-            "course": "UX/UI med frontendkompeten",
+            "course": "UX/UI med frontendkompetens",
             "school": "Chas Academy",
             "desc": "YH utbildning",
             "period": "2022-2024"
@@ -51,7 +51,22 @@
         {
             "experience": "Jag har erfarenhet av att skapa content för webben, både från ett arbete från Enjoy Wine and spirits"
         }
+    ],
+
+    "skills":[
+        {            
+            "info": "Ställa frågor"
+        },
+
+        {
+            "info": "håll i grupper och föreläsningar"
+        }, 
+
+        {
+            "info": "Att omformulera och problemlösa"
+        }
     ]
+
 }
 
    

@@ -1,6 +1,6 @@
 const courseList = document.querySelector('.courseList');
 const workList = document.querySelector('.workList');
-
+const skillsList = document.querySelector('.skillsList');
 
 async function getData() {
     const url = '/cv.json';
@@ -13,10 +13,10 @@ async function getData() {
         
         json.courses.forEach(element => {
             courseList.innerHTML += `
-            <li><h3>${element.course}</h3></li>
-            <li><p>${element.school}</p></li>
-            <li><p>${element.desc}</p></li>
-            <li><p>${element.period}</p></li>`;
+            <h3>${element.course}</h3>
+            <li>${element.school}</li>
+            <li>${element.desc}</li>
+            <li>${element.period}</li>`;
         });
 
         json.work.forEach(element => {
@@ -25,7 +25,14 @@ async function getData() {
             <p>${element.experience}</p>
             </li>`;
         });
-            
+           
+        json.skills.forEach(element => {
+            skillsList.innerHTML += `
+            <li>
+            <p>${element.info}</p>
+            </li>`;
+        });
+
     } else {
         console.log("HTTP-Error: " + response.status);
     }
@@ -50,4 +57,3 @@ function windowsOnclick(event) {
 trigger.addEventListener('click', toggleModal); //Här är något felfel..
 closeButton.addEventListener('click', toggleModal);
 window.addEventListener('click', windowsOnclick);
-
