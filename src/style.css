@@ -145,6 +145,7 @@ nav a:is(:link, :active, :visited).active {
     max-width: 100%;
 }
 
+
 /* Värden */
 
 .values {
@@ -288,11 +289,11 @@ nav a:is(:link, :active, :visited).active {
 
 .container-cv {
     width: 100vw;
-    height: 100rem;
+    height: 90rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     grid-template-areas: 
     "header"
     "hero"
@@ -313,7 +314,7 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--black);
     border-radius: .3rem;
     padding: 0.2rem 2rem;
-    margin: 0 1.5rem;
+    margin: 0 2rem 0 1rem;
 }
 
 .courseList {
@@ -324,13 +325,9 @@ nav a:is(:link, :active, :visited).active {
     padding: 0.8rem 0;
 }
 
-.skillsList {
-    list-style-type: none;
-}
-
 .experience {
     grid-area: experience;
-    height: 35rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -338,7 +335,7 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--black);
     border-radius: 0.3rem;
     padding: 0.2rem 2rem;
-    margin: 0.1rem 1.5rem;
+    margin: 0 2rem 0 1rem;
 }
 
 .workList {
@@ -357,23 +354,8 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--black);
     border-radius: .3rem;
     padding: 0 2rem;
-    margin: 0 1.5rem;
-    list-style-type: none;
+    margin: 0 2rem 0 1rem;
 }
-
-/*.tools {
-    grid-area: tools;
-    background-color: var(--light);
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid var(--black);
-    border-radius: .3rem;
-    padding: 0 2rem;
-    margin: 0 2rem;
-}*/
 
 /* Portfolio sidan för mobil*/
 .container-portfolio {
@@ -398,7 +380,6 @@ nav a:is(:link, :active, :visited).active {
 .project1 {
     max-width: 100%;
     height: 25rem;
-    /*background-color: var(--gray);*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -514,9 +495,7 @@ nav a:is(:link, :active, :visited).active {
     align-items: center;
     border-radius: 5px;
     padding-bottom: 30px;
-    margin-top: 30px;
-    margin-left: 1rem;
-    margin-bottom: 2rem;
+    margin: 2rem 1rem 2rem 0.5rem;
     box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
     letter-spacing: 0.2rem;
 }
@@ -784,35 +763,25 @@ input {
         "education skills"
         "footer footer";
     }
-
-    .cv {
-        width: 100vw;
-        background-color: aqua;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
-    }
     
     .education {
-        height: 45rem;
-        max-width: 50%;
-        background-color: lightcoral;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        grid-area: education;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 5;
+        height: 47rem;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;    
         padding: 1rem 2rem;
     }
     
     .experience {
         height: 20rem;
-        max-width: 50%;
-        background-color: lightgrey;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -830,26 +799,14 @@ input {
         grid-column-end: 3;
         grid-row-start: 4;
         grid-row-end: 5;
-        background-color: lightsalmon;
-        max-width: 30%;
-        height: 17rem;
+        max-width: 100%;
+        height: 12rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding: 1rem 2rem;
     }
-
-    /*.tools {
-        min-width: 80%;
-        max-width: 90%;
-        height: 17rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 1rem 2rem;
-    }*/
 
     .container-portfolio {
         width: 100vw;

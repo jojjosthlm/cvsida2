@@ -55,5 +55,5 @@ function windowsOnclick(event) {
 }
 
 trigger.addEventListener('click', toggleModal); //Här är något felfel..
-closeButton.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal); // Kan detta vara felet, att addEventListner används två gånger???
 window.addEventListener('click', windowsOnclick);
