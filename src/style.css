@@ -29,10 +29,12 @@ h1 {
 h2 {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0 0 0.5rem 0;
+    letter-spacing: 0.3rem;
 }
 
 h3 {
-    font-family: 'Lora', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.2rem;
 }
 
 a {
@@ -80,8 +82,11 @@ nav {
 #logo {
     font-size: 1.6rem;
     text-transform: lowercase;
-    font-family: 'Lora', sans-serif;
     color: var(--black);
+}
+
+#logo h3 {
+    font-family: 'Lora', sans-serif;
 }
 
 nav ul {
@@ -117,7 +122,6 @@ nav a:is(:link, :active, :visited).active {
 }
 
 /* Min hero */
-
 .hero {
     grid-area: hero;
     width: 100vw;
@@ -285,25 +289,62 @@ nav a:is(:link, :active, :visited).active {
 
 .footer a {
     font-size: 0.8rem;
+    font-weight: bold;
+    font-size: 0.7rem;
 }
 
 .container-cv {
     width: 100vw;
-    height: 90rem;
+    height: 100rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     gap: 1rem;
     grid-template-areas: 
     "header"
-    "hero"
+    "cvHead"
     "education"
     "experience"
     "skills"
     "footer";
 }
 
+.cvHead {
+    min-width: 60%;
+    max-width: 80%;
+    height: 7rem;
+    grid-area: cvHead;
+    background-color: var(--gray);
+    color: var(--apricot);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--gray);
+    border-radius: .3rem;
+    padding: 0.7rem 2rem;
+    margin-left: 2rem;
+}
+
+.cvInfo h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.cvInfo li {
+    list-style-type: none;
+}
+
+.cvInfo p {
+    
+    font-size: 0.8rem;
+    font-family: 'Roboto';
+    color: var(--black);
+    padding-top: 0.3rem;
+}
+
 .education {
+    min-width: 60%;
+    max-width: 80%;
     grid-area: education;
     background-color: var(--light);
     height: 50rem;
@@ -311,31 +352,34 @@ nav a:is(:link, :active, :visited).active {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 3px solid var(--black);
+    border: 3px solid var(--gray);
     border-radius: .3rem;
-    padding: 0.2rem 2rem;
-    margin: 0 2rem 0 1rem;
+    padding: 0.7rem 2rem;
+    margin-left: 2rem;
 }
 
 .courseList {
     list-style-type: none;
 }
 
-.courseList h3 {
+.courseList h4 {
     padding: 0.8rem 0;
+    font-family: 'Lora', sans-serif;    
 }
 
 .experience {
+    min-width: 60%;
+    max-width: 80%;
     grid-area: experience;
-    height: 25rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: 3px solid var(--black);
+    border: 3px solid var(--gray);
     border-radius: 0.3rem;
-    padding: 0.2rem 2rem;
-    margin: 0 2rem 0 1rem;
+    padding: 0.7rem 2rem;
+    margin-left: 2rem;
 }
 
 .workList {
@@ -344,17 +388,23 @@ nav a:is(:link, :active, :visited).active {
 
 
 .skills {
+    min-width: 60%;
+    max-width: 80%;
     grid-area: skills;
     background-color: var(--light);
-    height: 10rem;
+    height: 12rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid var(--black);
+    border: 3px solid var(--gray);
     border-radius: .3rem;
-    padding: 0 2rem;
-    margin: 0 2rem 0 1rem;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+}
+
+.skills li {
+    padding-top: 0.3rem;
 }
 
 /* Portfolio sidan för mobil*/
@@ -367,7 +417,7 @@ nav a:is(:link, :active, :visited).active {
     grid-template-rows: repeat(9, 1fr);
     grid-template-areas: 
     "header"
-    "hero"
+    "portfolioHead"
     "project1-image"
     "text1"
     "project2-image"
@@ -377,16 +427,31 @@ nav a:is(:link, :active, :visited).active {
     "footer";
 }
 
+.portfolioHead {
+    grid-area: portfolioHead;
+    max-width: 100%;
+    height: 5rem;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray);
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-left: 2rem;
+
+}
 .project1 {
     max-width: 100%;
     height: 25rem;
+    background-color: var(--apricot);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     margin: 0 2rem 0 2rem;
-    border: 3px solid var(--black);
+    /*border: 3px solid var(--black);*/
 }
 
 .project-image1 {
@@ -406,20 +471,20 @@ nav a:is(:link, :active, :visited).active {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
     padding: 0 1rem;
 }
 
 .project2 {
     max-width: 100%;
     height: 25rem;
-    /*background-color: lightcoral;*/
+    background-color: var(--gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     margin: 0 2rem 0 2rem;
-    border: 3px solid var(--black);
 }
 
 .project2-image {
@@ -440,19 +505,20 @@ nav a:is(:link, :active, :visited).active {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
     padding: 0 1rem;
 }
 
 .project3 {
     max-width: 100%;
     height: 25rem;
+    background-color: var(--apricot);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
     margin: 0 2rem 0 2rem;
-    border: 3px solid var(--black);
 }
 
 .project3-image {
@@ -473,6 +539,7 @@ nav a:is(:link, :active, :visited).active {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
     padding: 0 1rem;
 }
 
@@ -497,7 +564,12 @@ nav a:is(:link, :active, :visited).active {
     padding-bottom: 30px;
     margin: 2rem 1rem 2rem 0.5rem;
     box-shadow: 0px 10px 10px 0px rgba(125, 104, 104, 0.8);
-    letter-spacing: 0.2rem;
+}
+
+.contact-form h2 {
+    color: var(--apricot);
+    letter-spacing: 0.3rem;
+    font-weight: bold;
 }
 
 .side {
@@ -515,16 +587,15 @@ input {
 .btn-send {
     background-color: var(--light);
     width: 6rem;
-    height: 2.5rem;
     color: var(--black);
-    padding: 0.8rem 1.3rem;
+    padding: 0.7rem 1.3rem;
     margin-top: 50px;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 14px;
-    border-radius: 5%;    
+    border: 2px solid var(--black);
 }
 
 #yourname {
@@ -610,10 +681,10 @@ and (max-width: 767px) {
 }
 
 .side {
-        background-color: var(--light);
-        width: 20%;
-        height: 30rem;
-        border: 3px solid var(--black);
+    background-color: var(--light);
+    width: 20%;
+    height: 30rem;
+    border: 3px solid var(--black);
 }
 
 .contact-me {
@@ -715,6 +786,8 @@ input {
         "footer footer";
     }
 
+    /* Om mig delen för desktop */
+
     .arrow3 {
         display: none;
     }
@@ -749,19 +822,42 @@ input {
         align-items: center;
     }
 
+    /* CV sida för desktop */
+
     .container-cv {
         width: 100vw;
-        height: 50rem;
+        height: 60rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5, 1fr);
-        gap: 1rem;
+        gap: 0.5rem;
         grid-template-areas: 
         "header header"
-        "hero hero"
+        "cvHead cvHead"
         "education experience"
         "education skills"
         "footer footer";
+    }
+
+    .cvHead {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0 0;
+    }
+
+    .cvInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cvInfo li {
+        display: inline-block;
+        padding: 0 1rem;
     }
     
     .education {
@@ -808,6 +904,8 @@ input {
         padding: 1rem 2rem;
     }
 
+    /* Portfolio sida för desktop */
+
     .container-portfolio {
         width: 100vw;
         height: 85rem;
@@ -816,12 +914,21 @@ input {
         grid-template-rows: repeat(6, 1fr);
         grid-template-areas: 
         "header"
-        "hero"
+        "portfolioHead"
         "project1"
         "project2"
         "project3"
         "footer";
     }
+
+    .portfolioHead {
+        width: 100vw;
+        max-width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .project1 {
         grid-area: project1;
         display: flex;
@@ -886,8 +993,10 @@ input {
         grid-column-start: 2;
         grid-column-end: 3;
         text-align: center;
-        padding-right: 8rem;
+        padding-right: 2rem;
     }
+
+    /* Kontaktsida för desktop */
 
     .container-contact {
         width: 100vw;
@@ -920,63 +1029,11 @@ input {
     
     .contact-form {
         width: 45%;
-        height: 35rem;
+        height: 33rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 30px;
-        margin-top: 50px;
-        margin-left: 0.1rem;
+        margin-top: 3rem;
     }
-    
-    input {
-        border: 0px solid;
-    }
-    
-    #textarea {
-        border: 0px solid;
-    }
-    
-    .btn-send {
-        background-color: var(--light);
-        width: 6rem;
-        height: 2.5rem;
-        color: var(--black);
-        padding: 0.8rem 1.3rem;
-        margin-top: 50px;
-        text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 14px;
-        border-radius: 5%;    
-    }
-    
-    #yourname {
-        background-color: var(--light);
-        padding: 20px;
-        font-family: 'Lora', sans-serif;
-        border-radius: 10px;
-        font-weight: bold;
-    }
-    
-    #email {
-        background-color: var(--light);
-        padding: 20px;
-        font-family: 'Lora', sans-serif;
-        border-radius: 10px;
-        font-weight: bold;
-    }
-    
-    #textarea {
-        width: 13rem;
-        height: 150px;
-        padding: 20px;
-        background-color: var(--light);
-        font-family: 'Lora', sans-serif;
-        border-radius: 10px;
-        font-weight: bold;
-    }
-     
  }
