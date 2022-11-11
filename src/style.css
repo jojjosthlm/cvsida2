@@ -323,7 +323,7 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--gray);
     border-radius: .3rem;
     padding: 0.7rem 2rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .cvInfo h3 {
@@ -355,7 +355,7 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--gray);
     border-radius: .3rem;
     padding: 0.7rem 2rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .courseList {
@@ -379,7 +379,7 @@ nav a:is(:link, :active, :visited).active {
     border: 3px solid var(--gray);
     border-radius: 0.3rem;
     padding: 0.7rem 2rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 .workList {
