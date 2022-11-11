@@ -3,7 +3,7 @@ const workList = document.querySelector('.workList');
 const skillsList = document.querySelector('.skillsList');
 
 async function getData() {
-    const url = '/cvsida2/cv.json';
+    const url = '../cvsida2/cv.json';
     let response = await fetch(url);
     console.log('response: ', response);
 
